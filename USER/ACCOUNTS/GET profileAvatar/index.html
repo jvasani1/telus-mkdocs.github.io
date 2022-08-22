@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Interface Agreement - GET Profile Avatar - User Profile MS docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Interface Agreement - GET Profile Avatar";
+        var mkdocs_page_input_path = "USER\\ACCOUNTS\\GET profileAvatar.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> User Profile MS docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../POST%20subAccounts/">Interface Agreement -POST USER/ACCOUNTS/SUBACCOUNTS</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Interface Agreement - GET Profile Avatar</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11-input-data">1.1     Input Data:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-output-data">1.2     Output Data:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-request-example">1.4  Request Example:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#15-response-example">1.5     Response Example:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#16-error-example">1.6 Error example:</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">User Profile MS docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Interface Agreement - GET Profile Avatar</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="interface-agreement-get-profile-avatar">Interface Agreement - GET Profile Avatar</h1>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Action</code></td>
+<td>Get Avatar for Profiles</td>
+</tr>
+<tr>
+<td><code>Description</code></td>
+<td>The API can be used get profile avatars</td>
+</tr>
+<tr>
+<td><code>Type</code></td>
+<td>HTTP GET</td>
+</tr>
+<tr>
+<td><code>Output Type</code></td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td>application/json</td>
+</tr>
+<tr>
+<td><code>URL</code></td>
+<td>GET {{AGL}}/<tenant>/<appversion>/<cluster>/<locale>/<channel>/<propertyName>/USERS/AVATARS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-input-data">1.1     Input Data:</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Mandatory</th>
+<th>Location</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tenant</td>
+<td>Service Platform (client Name)</td>
+<td>Y</td>
+<td>Path</td>
+<td>String</td>
+<td>Must be passed as TELUS</td>
+</tr>
+<tr>
+<td>ids</td>
+<td>comma separated list of avatar ids to filter result by</td>
+<td>N</td>
+<td>Query param</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>pageNumber</td>
+<td>Page number to fetch.</td>
+<td>N</td>
+<td>Query param</td>
+<td>Integer</td>
+<td>Default = 1</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>The size of page ( number of avatars per page)</td>
+<td>N</td>
+<td>Query param</td>
+<td>Integer</td>
+<td>Default = 50</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-output-data">1.2     Output Data:</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Location (Header/Path/Query)</th>
+<th>Description</th>
+<th>Mandatory</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>resultCode</td>
+<td>Body</td>
+<td>Result code of the interface call</td>
+<td></td>
+<td>Y</td>
+<td>String</td>
+</tr>
+<tr>
+<td>resultObj</td>
+<td>Body</td>
+<td>List of Avatar objects</td>
+<td>Y</td>
+<td>String</td>
+<td>for Avatar object details, refer Avatar table</td>
+</tr>
+<tr>
+<td>executionTime</td>
+<td>Body</td>
+<td>Interface execution time</td>
+<td>Y</td>
+<td>Integer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Avatar:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Y</td>
+<td>String</td>
+<td>Unique id to identify avatar</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td>Y</td>
+<td>String</td>
+<td>displayName of the avatar</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Y</td>
+<td>String</td>
+<td>type of the avatar. Possible values- STANDARD/KID</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Y</td>
+<td>String</td>
+<td>category of the avatar</td>
+</tr>
+<tr>
+<td>displayImages</td>
+<td>Y</td>
+<td>String</td>
+<td>for more details refer displayImage table</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Y</td>
+<td>String</td>
+<td>status of the avatar. Possible values- - ACTIVE/INACTIVE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14-request-example">1.4  Request Example:</h2>
+<pre><code>URL: GET https://telus.dev.n.svc.tv.telus.net/TELUS/T2.0/R/ENG/IOS/OPTIK/USER/AVATARS?type=KID&amp;pageSize=3&amp;pageNumber=1
+</code></pre>
+<h2 id="15-response-example">1.5     Response Example:</h2>
+<p>Note: Only active <code>status=ACTIVE</code> avatars need to be shown for the user for the selection. While creating and updating profiles, we only consider the ACTIVE avatars. </p>
+<pre><code>{
+    "resultCode": "ACN_200",
+    "resultDescription": "OK",
+    "resultObj": [
+        {
+            "id": "25a6741d-fb6a-4ef7-add0-1ae10d4d7fea",
+            "displayName": "avatar3",
+            "type": "KID",
+            "category": "DEFAULT123",
+            "displayImages": [
+                {
+                    "imageExternalId": "abc",
+                    "imageRatio": "20*78",
+                    "imageUrl": "https://dummy3"
+                },
+                {
+                    "imageExternalId": "bcd",
+                    "imageRatio": "20*56",
+                    "imageUrl": "https://dummy3"
+                }
+            ],
+            "status": "INACTIVE"
+        },
+        {
+            "id": "f5ac404a-eb0d-4309-9dc5-9948817af729",
+            "displayName": "avatar3",
+            "type": "KID",
+            "category": "DEFAULT",
+            "displayImages": [
+                {
+                    "imageExternalId": "abc",
+                    "imageRatio": "20*78",
+                    "imageUrl": "https://dummy2"
+                },
+                {
+                    "imageExternalId": "bcd",
+                    "imageRatio": "20*56",
+                    "imageUrl": "https://dummy1"
+                }
+            ],
+            "status": "ACTIVE"
+        },
+        {
+            "id": "3af5974b-a10e-44fb-bca0-7e790c1b8da2",
+            "displayName": "avatar3",
+            "type": "KID",
+            "category": "DEFAULT",
+            "displayImages": [
+                {
+                    "imageExternalId": "abc",
+                    "imageRatio": "20*78",
+                    "imageUrl": "https://dummy2"
+                },
+                {
+                    "imageExternalId": "bcd",
+                    "imageRatio": "20*56",
+                    "imageUrl": "https://dummy1"
+                }
+            ],
+            "status": "ACTIVE"
+        }
+    ],
+    "executionTime": 23
+}
+</code></pre>
+<h2 id="16-error-example">1.6 Error example:</h2>
+<pre><code>{
+    "resultCode": "KO",
+    "errorDescription": "ACN_3000",
+    "message": "GENERIC ERROR",
+    "resultObj": [],
+    "systemTime": 1657219406424
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Result Code</th>
+<th>resultObj.resultCode</th>
+<th>Result Description</th>
+<th>cAUSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>401</td>
+<td>ACN_3000</td>
+<td>GENERIC ERROR</td>
+<td>One of the possible cause is that AGL is unable to reach telus-avatar-ms</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../POST%20subAccounts/" class="btn btn-neutral float-left" title="Interface Agreement -POST USER/ACCOUNTS/SUBACCOUNTS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../POST%20subAccounts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
